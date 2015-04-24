@@ -20,4 +20,12 @@ would print for example:
 features: <em>Noise</em>Guard, SilentSeek technology, Fluid Dynamic Bearing (FDB) motor
 ```
 
+The SolrQueryResults object contains a Highlights property defined as: 
+IDictionary<string, HighlightedSnippets> Highlights
+
+Within the IDictionary the Key corresponds to the uniquekey of the returned document. The HighlightedSnippets correspond to an IDictionary that contains the following:
+Key: The field where highlighting is applied
+value: Highlighted snippet 
+
+
 Solr reference documentation: http://wiki.apache.org/solr/HighlightingParameters

@@ -22,9 +22,19 @@ solrPerson.Commit();
 ```
 
 ### With Windsor facility
+To use CastleWindsor you need to reference Castle.Facilities.SolrNetIntegration as well as CastleWinsor. 
+
+Please include a reference to the following libraries:
+* Castle.Core.dll
+* Castle.Facilities.SolrNetIntegration.dll
+* Castle.Windsor.dll 
+
+_Note: SolrNet comes with a version of Castle, but alternatively you can download from NuGet but being mindful that there might be a point that a breaking change might occur._
+
 Code config:
 
 ```C#
+IWindsorContainer container = new WindsorContainer();
 var solrFacility = new SolrNetFacility("http://localhost:8983/solr/defaultCore");
 solrFacility.AddCore("core0-id", typeof(Product), "http://localhost:8983/solr/product");
 solrFacility.AddCore("core1-id", typeof(Product), "http://localhost:8983/solr/product2");

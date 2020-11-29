@@ -9,7 +9,7 @@ There are basically three kinds of facet queries:
  1. arbitrary facet queries
 
 Facet queries are issued through the `FacetQueries` property of `QueryOptions`. Then the `QueryOptions` instance is passed to the server instance.
-test file change
+###test file change
 ### Querying by field
 Querying by field is handled by the `SolrFacetFieldQuery` class. Results are available through the `FacetFields` property.
 
